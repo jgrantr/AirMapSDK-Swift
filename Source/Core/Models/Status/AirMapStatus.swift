@@ -9,7 +9,8 @@
 import ObjectMapper
 
 /// A list of all airspace objects intersecting with the proposed area. Includes status color and distance.
-open class AirMapStatus {
+@objc
+open class AirMapStatus : NSObject {
 
 	public enum StatusColor: String {
 		case red
