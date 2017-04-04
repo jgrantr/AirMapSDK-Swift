@@ -37,7 +37,7 @@ open class AirMapStatus : NSObject {
 		}
 	}
 	
-	@objc public enum IntStatusColor: Int, RawRepresentable {
+	@objc public enum AirMapStatusColor: Int, RawRepresentable {
 		case red
 		case yellow
 		case green
@@ -101,8 +101,8 @@ open class AirMapStatus : NSObject {
             .count > 0
     }
 	
-	public var color: IntStatusColor {
-		return IntStatusColor(rawValue: advisoryColor.rawValue)!
+	public var color: AirMapStatusColor {
+		return AirMapStatusColor(rawValue: advisoryColor.rawValue)!
 	}
 	
 	internal var availablePermits: [AirMapAvailablePermit] {
