@@ -36,6 +36,43 @@ open class AirMapStatus : NSObject {
 			}
 		}
 	}
+	
+	@objc public enum IntStatusColor: Int, RawRepresentable {
+		case red
+		case yellow
+		case green
+		case gray
+		
+		public typealias RawValue = String
+
+		public var rawValue: RawValue {
+			switch self {
+				case .red:
+					return StatusColor.red.rawValue
+				case .yellow:
+					return StatusColor.yellow.rawValue
+				case .green:
+					return StatusColor.green.rawValue
+				case .gray:
+					return StatusColor.gray.rawValue;
+			}
+		}
+		
+		public init?(rawValue: RawValue) {
+			switch rawValue {
+				case "red":
+					self = .red
+				case "yellow":
+					self = .yellow
+				case "green":
+					self = .green
+				case "gray":
+					self = .gray
+				default:
+					self = .gray
+			}
+		}
+	}
 
 	public fileprivate(set) var maxSafeDistance: Meters = 0
 	public fileprivate(set) var advisoryColor = StatusColor.gray
@@ -63,6 +100,10 @@ open class AirMapStatus : NSObject {
             .flatMap { $0.requirements?.notice }
             .count > 0
     }
+	
+	public var color: IntStatusColor {
+		return IntStatusColor(rawValue: advisoryColor.rawValue)!
+	}
 	
 	internal var availablePermits: [AirMapAvailablePermit] {
 		return Array(Set(advisories.flatMap { $0.availablePermits }))
