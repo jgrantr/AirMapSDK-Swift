@@ -34,7 +34,7 @@ open class AirMapStatusAdvisory: NSObject {
 	open internal(set) var organization: AirMapOrganization?
 	
 	public var typeAsString: String {
-		return type.title;
+		return type.rawValue;
 	}
 	
 	internal fileprivate(set) var organizationId: String?
