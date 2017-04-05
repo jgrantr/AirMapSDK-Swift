@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-open class AirMapStatusRequirements {
+open class AirMapStatusRequirements : NSObject {
 	
 	open var id: String!
 	open var notice: AirMapStatusRequirementNotice?

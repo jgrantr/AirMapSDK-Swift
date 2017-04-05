@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-open class AirMapStatusAdvisoryWildfireProperties {
+open class AirMapStatusAdvisoryWildfireProperties : NSObject {
 
 	open var size: Int?
 	open var dateEffective: Date?

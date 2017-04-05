@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-open class AirMapStatusRequirementNotice {
+open class AirMapStatusRequirementNotice : NSObject {
 	
 	open var digital = false
 	open var phoneNumber: String?

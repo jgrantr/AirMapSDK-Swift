@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-open class AirMapStatusAdvisoryAirportProperties {
+open class AirMapStatusAdvisoryAirportProperties : NSObject {
 
 	open var identifier: String?
 	open var phone: String?

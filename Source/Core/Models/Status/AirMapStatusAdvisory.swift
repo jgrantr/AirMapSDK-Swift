@@ -33,6 +33,10 @@ open class AirMapStatusAdvisory: NSObject {
 	open fileprivate(set) var availablePermits = [AirMapAvailablePermit]()
 	open internal(set) var organization: AirMapOrganization?
 	
+	public var typeAsString: String {
+		return type.title;
+	}
+	
 	internal fileprivate(set) var organizationId: String?
 
 	public required init?(map: Map) {

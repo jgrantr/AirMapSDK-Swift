@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-open class AirMapStatusAdvisorySpecialUseProperties {
+open class AirMapStatusAdvisorySpecialUseProperties : NSObject {
 
 	open var currentlyActive: Bool?
 	open var desc: String?

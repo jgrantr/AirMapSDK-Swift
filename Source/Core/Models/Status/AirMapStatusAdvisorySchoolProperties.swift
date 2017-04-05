@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-open class AirMapStatusAdvisorySchoolProperties {
+open class AirMapStatusAdvisorySchoolProperties : NSObject {
 
 	open var students: Int? // number of students
 

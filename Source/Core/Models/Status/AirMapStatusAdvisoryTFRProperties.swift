@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-open class AirMapStatusAdvisoryTFRProperties {
+open class AirMapStatusAdvisoryTFRProperties : NSObject {
 
 	open var url: String = ""
 	open var startTime: Date?

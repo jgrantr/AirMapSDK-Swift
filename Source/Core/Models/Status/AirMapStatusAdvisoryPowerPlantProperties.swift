@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-open class AirMapStatusAdvisoryPowerPlantProperties {
+open class AirMapStatusAdvisoryPowerPlantProperties : NSObject {
 
 	open var generatorType: String?
 	open var output: Int?
